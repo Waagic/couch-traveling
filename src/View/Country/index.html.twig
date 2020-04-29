@@ -3,9 +3,153 @@
 {% block content %}
     <div class="container">
         <div class="row title-row">
-            <div class="col-8 offset-sm-2">
-                France
+            <div class="col-8">
+                <h1>France</h1>
+            </div>
+            <div class="meteo">Meteo</div>
+        </div>
+        <div class="row container-informations">
+            <div class="col-12 col-xl-6">
+                <div class="row description-row">
+                    <div class="col-12 col-xl-12">
+                        <p class="description-text">
+                            La France, pays de l'Europe occidentale, compte des villes médiévales, des villages alpins
+                            et
+                            des
+                            plages. Paris, sa capitale, est célèbre pour ses maisons de mode, ses musées d'art
+                            classique,
+                            dont
+                            celui
+                            du Louvre, et ses monuments comme la Tour Eiffel. Le pays est également réputé pour ses vins
+                            et
+                            sa
+                            cuisine raffinée. Les peintures rupestres des grottes de Lascaux, le théâtre romain de Lyon
+                            et
+                            l'immense
+                            château de Versailles témoignent de sa riche histoire.
+                        </p>
+                    </div>
+                </div>
+                <div class="row flag-title">
+                    <div class="col-12">
+                        <h2>Drapeau</h2>
+                    </div>
+                </div>
+                <div class="row flag-row">
+                    <div class="col-12 col-xl-12">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/250px-Flag_of_France.svg.png">
+                    </div>
+                </div>
+                <div class="row currency-title">
+                    <div class="col-12">
+                        <h2>Langue</h2>
+                    </div>
+                </div>
+                <div class="row currency-row">
+                    <div class="col-12 col-xl-12">
+                        <p>Français</p>
+                    </div>
+                </div>
+                <div class="row currency-title">
+                    <div class="col-12">
+                        <h2>Monnaie</h2>
+                    </div>
+                </div>
+                <div class="row currency-row">
+                    <div class="col-12 col-xl-12">
+                        <p>Euro €</p>
+                    </div>
+                </div>
+                <div class="row title-music-row">
+                    <div class="col-12">
+                        <h2>Musiques locales</h2>
+                    </div>
+                </div>
+                <div class="row music-row">
+                    <div class="col-12 col-xl-4">
+                        Titre - Artiste
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        Titre - Artiste
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        Titre - Artiste
+                    </div>
+                </div>
+                <div class="row title-plat-row">
+                    <div class="col-12">
+                        <h2>Plats locaux</h2>
+                    </div>
+                </div>
+                <div class="row plat-row">
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Choucroute</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Choucroute</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">
+                        <div class="card">
+                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Choucroute</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div id="street-view"></div>
             </div>
         </div>
+        <div class="row container-webcams">
+            <div class="col-12 col-xl-4">
+                <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
+                   href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
+                <script async type="text/javascript"
+                        src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+            </div>
+            <div class="col-12 col-xl-4">
+                <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
+                   href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
+                <script async type="text/javascript"
+                        src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+            </div>
+            <div class="col-12 col-xl-4">
+                <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
+                   href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
+                <script async type="text/javascript"
+                        src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+            </div>
+        </div>
+
     </div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        var panorama;
+
+        function initialize() {
+            panorama = new google.maps.StreetViewPanorama(
+                document.getElementById('street-view'),
+                {
+                    position: {lat: 48.8534, lng: 2.3488},
+                    pov: {heading: 165, pitch: 0},
+                    zoom: 1
+                });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqeJ3DM3pEmmI5Qyt_qwaqFwhXJUag9Rs&callback=initialize">
+    </script>
 {% endblock %}
