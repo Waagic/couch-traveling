@@ -1,10 +1,11 @@
+/* GENERAL CSS */
 * {
     margin: 0;
 }
 body {
     font-family: 'Roboto', sans-serif;
 }
-
+/* MUSEUM SECTION FOR ALL SIZE */
 .museum-banner-container {
     display: flex;
     overflow: hidden;
@@ -31,9 +32,9 @@ body {
     color: white;
     padding: 15px 30px;
 }
-
+/* EXTRA SMALL DEVICES AND MOBILE */
 @media screen and (max-width: 700px){
-
+    /* MUSEUM SECTION */
     .museum-first-block {
         padding: 10px;
         display: flex;
@@ -86,8 +87,9 @@ body {
     }
 
 }
-
+/* SMALL DEVICES AND TABLET */
 @media screen and (min-width: 700px) and (max-width: 1080px){
+    /* MUSEUM SECTION */
     .museum-first-block {
         padding: 10px;
         justify-content: center;
@@ -144,9 +146,9 @@ body {
         min-height: 150px;
     }
 }
-
+/* LARGE DEVICES AND DESKTOP */
 @media screen and (min-width: 1081px) {
-
+    /* MUSEUM SECTION */
     .museum-first-block {
         padding: 10px;
         display: flex;
