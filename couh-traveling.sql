@@ -43,7 +43,7 @@ CREATE TABLE `food` (
 
 CREATE TABLE `music` (
     `id` int  NOT NULL ,
-    `Artist` VACHAR(255)  NOT NULL ,
+    `Artist` VARCHAR(255)  NOT NULL ,
     `Title` VARCHAR(255)  NOT NULL ,
     `idCountry` int  NOT NULL ,
     PRIMARY KEY (
