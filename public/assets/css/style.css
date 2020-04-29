@@ -105,8 +105,9 @@ body {
     }
 
     .museum-video iframe{
-        margin: 0 15px;
-        width: 90%;
+        margin: 10px 15px;
+        width: 450px;
+        height: 250px;
         box-shadow: black 0px 0px 10px;
     }
 
@@ -129,10 +130,13 @@ body {
         box-shadow: black 0px 0px 10px;
     }
 
-    .museum-container-webcams,
-    .museum-container-webcams-first {
+    .museum-container-webcams {
         margin: 10px;
         box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-container-webcams-first {
+        display: none;
     }
 
     .museum-cam {
