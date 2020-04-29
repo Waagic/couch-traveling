@@ -36,5 +36,6 @@ class CountryController extends AbstractController
         $country = $countryManager->selectOneById($id);
 
         return $this->twig->render('Country/show.html.twig', ['country' => $country]);
+        echo $id;
     }
 }
