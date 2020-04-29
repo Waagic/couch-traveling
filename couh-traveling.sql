@@ -43,7 +43,7 @@ CREATE TABLE `food` (
 
 CREATE TABLE `music` (
     `id` int  NOT NULL ,
-    `Artist` VACHAR(255)  NOT NULL ,
+    `Artist` VARCHAR(255)  NOT NULL ,
     `Title` VARCHAR(255)  NOT NULL ,
     `idCountry` int  NOT NULL ,
     PRIMARY KEY (
@@ -62,7 +62,7 @@ CREATE TABLE `museum` (
     )
 );
 
-ALTER TABLE `country` ADD CONSTRAINT `fk_country_idCurrency` FOREIGN KEY(`idCurrency`)
+/*ALTER TABLE `country` ADD CONSTRAINT `fk_country_idCurrency` FOREIGN KEY(`idCurrency`)
 REFERENCES `currency` (`id`);
 
 ALTER TABLE `country` ADD CONSTRAINT `fk_country_idLanguage` FOREIGN KEY(`idLanguage`)

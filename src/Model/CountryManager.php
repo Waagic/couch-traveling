@@ -1,12 +1,20 @@
 <?php
 
-
 namespace App\Model;
 
+/**
+ *
+ */
 class CountryManager extends AbstractManager
 {
+    /**
+     *
+     */
     const TABLE = 'country';
 
+    /**
+     *  Initializes this class.
+     */
     public function __construct()
     {
         parent::__construct(self::TABLE);
@@ -24,4 +32,5 @@ class CountryManager extends AbstractManager
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
+
 }
