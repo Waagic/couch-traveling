@@ -34,8 +34,10 @@ class CountryController extends AbstractController
     {
         $countryManager = new CountryManager();
         $country = $countryManager->selectOneById($id);
+        $musics = $countryManager->selectMusicByCountry($id);
 
-        return $this->twig->render('Country/show.html.twig', ['country' => $country]);
-        echo $id;
+        return $this->twig->render('Country/show.html.twig', ['country' => $country, 'musics'=>$musics]);
+        
+
     }
 }
