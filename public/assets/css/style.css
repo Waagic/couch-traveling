@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.museum-banner-container {
+    display: flex;
+    overflow: hidden;
+    max-height: 250px;
+    place-items: flex-end;
+    background: linear-gradient(to top,black, rgba(0,0,0,0));
+}
+
+.museum-banner-image {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    display: flex;
+    align-content: center
+}
+
+.museum-banner-image img {
+    width: 100%;
+}
+
+.museum-tilte {
+    position: absolute;
+    display: flex;
+    color: white;
+    padding: 15px 30px;
+}
+
+@media screen and (max-width: 700px){
+
+    .museum-first-block {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .museum-description {
+        width: 80%;
+        height: 100%;
+        padding: 30px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-video {
+        margin: 15px;
+        width: 90%;
+    }
+
+    .museum-video iframe{
+        width: 100%;
+        min-height: 200px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-street-view {
+        width: 100%;
+        display: contents;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-map {
+        height: 250px;
+        width: 90%;
+    }
+
+    .museum-second-block {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .museum-container-webcams-first {
+        width: 90%;
+    }
+
+    .museum-container-webcams {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 1080px){
+    .museum-first-block {
+        padding: 10px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .museum-description {
+        min-width: 200px;
+        margin: 30px;
+        width: 90%;
+        height: 100%;
+        padding: 30px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-video iframe{
+        margin: 0 15px;
+        width: 90%;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-street-view {
+        width: 100%;
+        display: contents;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-map {
+        height: 250px;
+        width: 90%;
+    }
+
+    .museum-second-block {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px;
+        padding: 30px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-container-webcams,
+    .museum-container-webcams-first {
+        margin: 10px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-cam {
+        min-width: 250px;
+        min-height: 150px;
+    }
+}
+
+@media screen and (min-width: 1081px) {
+
+    .museum-first-block {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .museum-description {
+        min-width: 200px;
+        width: 30%;
+        height: 100%;
+        padding: 30px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-video iframe{
+        margin: 0 15px;
+        width: 450px;
+        height: 250px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-street-view {
+        width: 30%;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-map {
+        height: 250px;
+        min-width: 300px;
+    }
+
+    .museum-second-block {
+        display: flex;
+        justify-content: space-around;
+        margin: 10px;
+        padding: 30px;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-container-webcams,
+    .museum-container-webcams-first {
+        width: 30%;
+        box-shadow: black 0px 0px 10px;
+    }
+
+    .museum-cam {
+        min-width: 250px;
+        min-height: 150px;
+    }
+}
