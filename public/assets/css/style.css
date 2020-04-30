@@ -12,8 +12,12 @@ div > iframe {
     display: block;
 }
 
-#street-view {
-    height: 300px;
+#map {
+    z-index: -1;
+}
+
+.country-street-view {
+    height: 100%;
 }
 
 .description-text {
@@ -24,11 +28,6 @@ div > iframe {
     text-align: center;
 }
 
-@media screen and (min-width: 640px) {
-    #street-view {
-        height: 100%;
-    }
-}
 /* GENERAL CSS */
 * {
     margin: 0;

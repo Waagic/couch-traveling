@@ -5,25 +5,20 @@
         <!--BANNER PICTURE-->
         <div class="museum-banner-container">
             <div class="museum-banner-image">
-                <img src="/assets/images/museum/british-museum-dome.jpg">
+                <img src="/assets/images/museum/{{ museum.image }}">
             </div>
             <div class="museum-tilte">
-                <h2>british museum - London</h2>
+                <h2>{{ museum.name }}</h2>
             </div>
         </div>
         <!--DESCRIPTION, VIDEO AND STREET VIEW-->
         <div class="museum-first-block">
             <div class="museum-description">
-                <p>
-                    Le British Museum, est un musée de l'histoire et de la culture humaine, situé à Londres, au Royaume-Uni.
-                    Ses collections, constituées de plus de sept millions d’objets, sont parmi les plus importantes du monde
-                    et proviennent de tous les continents.
-                </p>
+                <p>{{ museum.description }}</p>
             </div>
             <div class="museum-video">
-                <iframe src="https://www.youtube.com/embed/_Tz-ignJtHQ" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                <iframe src="{{ museum.video }}" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                 </iframe>
             </div>
             <div class="museum-street-view">
@@ -34,20 +29,20 @@
         <div class="museum-second-block">
             <div class="museum-container-webcams-first">
                 <div class="museum-cam">
-                    <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
-                       href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
+                    <a name="windy-webcam-timelapse-player" data-id="{{ museum.cam1 }}" data-play="day"
+                       href="https://windy.com/webcams/{{ museum.cam1 }}" target="_blank">.</a>
                 </div>
             </div>
             <div class="museum-container-webcams">
                 <div class="museum-cam">
-                    <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
-                       href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
+                    <a name="windy-webcam-timelapse-player" data-id="{{ museum.cam2 }}" data-play="day"
+                       href="https://windy.com/webcams/{{ museum.cam2 }}" target="_blank">.</a>
                 </div>
             </div>
             <div class="museum-container-webcams">
                 <div class="museum-cam">
-                    <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
-                       href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
+                    <a name="windy-webcam-timelapse-player" data-id="{{ museum.cam3 }}" data-play="day"
+                       href="https://windy.com/webcams/{{ museum.cam3 }}" target="_blank">.</a>
                 </div>
             </div>
         </div>
@@ -61,7 +56,7 @@
         panorama = new google.maps.StreetViewPanorama(
             document.getElementById('street-view'),
             {
-                position: {lat: 37.869260, lng: -122.254811},
+                position: {lat: {{ museum.lati }}, lng: {{ museum.longi }}},
                 pov: {heading: 165, pitch: 0},
                 zoom: 1
             });
