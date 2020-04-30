@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\MuseumManager;
+
 class MuseumController extends AbstractController
 {
 
@@ -13,8 +15,11 @@ class MuseumController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function show()
+    public function show($id)
     {
-        return $this->twig->render('Museum/index.html.twig');
+        $museumManager = new MuseumManager();
+        $museum = $museumManager->selectOneById($id);
+
+        return $this->twig->render('Museum/index.html.twig', ['museum' => $museum]);
     }
 }

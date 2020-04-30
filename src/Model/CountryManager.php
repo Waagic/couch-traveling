@@ -60,7 +60,7 @@ class CountryManager extends AbstractManager
 
     public function selectFoodByCountry($id)
     {
-        $query = "SELECT dish, img FROM " . self::TABLE .
+        $query = "SELECT * FROM " . self::TABLE .
             ' c JOIN food ON c.id = food.idCountry WHERE c.id =' . $id;
 
         $statement = $this-> pdo->prepare($query);

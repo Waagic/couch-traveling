@@ -31,8 +31,19 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="Museum/show/">Museums<span class="sr-only">Museums</span></a>
+            <li class="nav-item dropdown">
+                <p class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </p class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <div id="" class="nav-link">
+                        <input id="dark-v10" type="checkbox" name="rtoggle" value="dark"/>
+                        <label for="dark">Dark-Mode</label>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
@@ -42,8 +53,7 @@
 <footer>
     <div class="footer"></div>
 </footer>
-
-
+{% block javascript %}{% endblock %}
 {% block javascripts %}{% endblock %}
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
