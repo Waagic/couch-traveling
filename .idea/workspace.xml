@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d82f3326-bb54-4c2a-b5cf-41b3783864f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/Creation shema base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/creation shema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_country.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_country.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_country_lucas.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_currency.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_currency.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_food.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_food.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_language.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_language.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_museum.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_museum.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_music.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_music.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +103,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/DB" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DB" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
