@@ -17,8 +17,15 @@
 
         <div class="row">
 
-            <div class="meteo col-12">Meteo</div>
-
+            <div class="meteo col-2">
+                <div id="WeatherTutiempo"><div class="header"><h2>
+                            {{ meteo.locality.name }}</h2>
+                    </div><div class="daydata">
+                        <p class="it"><img alt="{{ meteo.day1.text }}" title="{{ meteo.day1.text }}
+                " height="50" src="https://v5i.tutiempo.net/wi/01/50/{{ meteo.day1.icon }}.png" width="50">
+                            {{ meteo.day1.temperature_max }}&deg;C<br>{{ meteo.day1.temperature_min }}&deg;C</p>
+                    </div>
+            </div>
         </div>
 
         <div class="row">
