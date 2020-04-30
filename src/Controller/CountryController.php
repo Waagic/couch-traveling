@@ -36,7 +36,8 @@ class CountryController extends AbstractController
     {
         $countryManager = new CountryManager();
         $country = $countryManager->selectOneById($id);
-
+        $musics = $countryManager->selectMusicByCountry($id);
+      
         $languageManager = new LanguageManager();
         $language = $languageManager->selectLanguageByCountry($id);
 
@@ -44,6 +45,6 @@ class CountryController extends AbstractController
         $currency = $currencyManager->selectCurrencyByCountry($id);
 
         return $this->twig->render('Country/show.html.twig', ['country' => $country,
-            'language' => $language, 'currency' => $currency]);
+            'language' => $language, 'currency' => $currency,  'musics' => $musics]);
     }
 }

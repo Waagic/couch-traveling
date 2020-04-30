@@ -19,4 +19,19 @@ class CountryManager extends AbstractManager
     {
         parent::__construct(self::TABLE);
     }
+
+    public function selectMusicByCountry($id)
+    {
+
+        $query = 'SELECT Artist, Title, url FROM ' . self::TABLE .
+            ' c JOIN  music ON c.id = music.idCountry WHERE c.id =' . $id;
+
+        $statement = $this-> pdo->prepare($query);
+        $statement->bindValue(':id', $id);
+        $statement -> execute();
+
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
 }
