@@ -81,46 +81,73 @@
                 }
             });
 
-            map.addLayer({
-                'id': 'state-borders',
-                'type': 'line',
-                'source': 'states_custom',
-                'layout': {},
-                'paint': {
-                    'line-color': '',
-                    'line-width': 1
-                }
-            });
+            // map.addLayer({
+            //     'id': 'state-borders',
+            //     'type': 'line',
+            //     'source': 'states_custom',
+            //     'layout': {},
+            //     'paint': {
+            //         'line-color': '',
+            //         'line-width': 1
+            //     }
+            // });
 
-            map.on('mousemove', 'state-fills', function(e) {
+            map.on('mousemove', 'state-fills', function (e) {
                 if (e.features.length > 0) {
                     if (hoveredStateId) {
                         map.setFeatureState(
-                            { source: 'states_custom', id: hoveredStateId },
-                            { hover: false }
+                            {source: 'states_custom', id: hoveredStateId},
+                            {hover: false}
                         );
                     }
                     hoveredStateId = e.features[0].id;
                     map.setFeatureState(
-                        { source: 'states_custom', id: hoveredStateId },
-                        { hover: true }
+                        {source: 'states_custom', id: hoveredStateId},
+                        {hover: true}
                     );
+
                 }
             });
 
-            map.on('mouseleave', 'state-fills', function() {
+            map.on('mouseleave', 'state-fills', function () {
                 if (hoveredStateId) {
                     map.setFeatureState(
-                        { source: 'states_custom', id: hoveredStateId },
-                        { hover: false }
+                        {source: 'states_custom', id: hoveredStateId},
+                        {hover: false}
                     );
                 }
                 hoveredStateId = null;
             });
 
+            function redirect() {
+                window.location.replace("http://localhost:9090/Country/show/" + hoveredStateId);
+            }
+
+            map.on('click', 'state-fills', function (e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId) {
+                        map.setFeatureState(
+                            {source: 'states_custom', id: hoveredStateId},
+                            {hover: false}
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        {source: 'states_custom', id: hoveredStateId},
+                        {hover: true}
+                    );
+                    map.onclick = redirect();
+
+                }
+            });
 
 
-            // var layerList = document.getElementById('menu');
+
+
+
+
+
+                    // var layerList = document.getElementById('menu');
             // var inputs = layerList.getElementsByTagName('input');
             //
             // function switchLayer(layer) {
