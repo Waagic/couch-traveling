@@ -46,6 +46,8 @@
             margin: auto auto;
         }
 
+        #street_view { height: 100%;}
+
 
 
     </style>
@@ -53,6 +55,7 @@
 
 
 {% block content %}
+
     {% include 'header.html' %}
     <section class="container-fluid">
 
@@ -148,9 +151,14 @@
         </div>
 
 
-        <div class="row">
-            <div class="col-4">
-                <div id="street-view"></div>
+        <div class="row" style="height: 600px; width: 600px;">
+            <div class="col-12">
+                <h2 style="text-align: center;">Une petite balade ?</h2>
+
+                <span id="get_lat">{{ country.lat }}</span>
+                <span id="get_long">{{ country.long }}</span>
+                <div id="street_view"></div>
+
             </div>
         </div>
 
@@ -159,19 +167,32 @@
 
 {% block javascripts %}
     <script>
-        var panorama;
+        let panorama;
+        const lat = document.getElementById('get_lat').innerHTML;
+        const long = document.getElementById('get_long').innerHTML;
 
         function initialize() {
             panorama = new google.maps.StreetViewPanorama(
-                document.getElementById('street-view'),
+                document.getElementById('street_view'),
                 {
-                    position: {lat: {{ country.lat }}, lng: {{ country.long }}},
+                    position: {lat: lat, lng: long},
                     pov: {heading: 165, pitch: 0},
                     zoom: 1
                 });
         }
+
+        // let map;
+        // function initMap() {
+        //     map = new google.maps.Map(document.getElementById('street_view'), {
+        //         center: {lat: lat, lng: long},
+        //         zoom: 8
+        //     });
+        // }
+
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqeJ3DM3pEmmI5Qyt_qwaqFwhXJUag9Rs&callback=initialize">
     </script>
+{#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5Xou67tRIPRc31tgVd2yY9SQFhaJpUw&callback=initMap"#}
+{#            async defer></script>#}
 {% endblock %}
