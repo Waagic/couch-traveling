@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `food`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `food` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) NOT NULL,
+  `dish` varchar(255) NOT NULL,
   `idCountry` int(11) NOT NULL,
   `img` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
