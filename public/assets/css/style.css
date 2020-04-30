@@ -4,6 +4,11 @@ body{
     background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
 }
 
+#WeatherTutiempo{
+    display: flex;
+    justify-content: flex-end;
+}
+
 h2{
     border-top:1px solid black;
 }
@@ -104,7 +109,7 @@ a:active {text-decoration: underline; color: #00f5ff;}
 
 header > span > h1 {font-size: 56px;}
 .nav-bar {
-    /*background: linear-gradient(to bottom,grey, rgba(0,0,0,0));*/
+    background: linear-gradient(to bottom,grey, rgba(0,0,0,0));
     height: 100px;
     z-index: 10;
 }
@@ -157,7 +162,6 @@ header > span > h1 {font-size: 56px;}
 
 .footer {
     background: linear-gradient(to top,grey, rgba(0,0,0,0));
-    height: 100px;
 }
 
 /* EXTRA SMALL DEVICES AND MOBILE */
