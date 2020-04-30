@@ -69,9 +69,16 @@
                 <h1>{{ country.Name }}</h1>
             </div>
 
-            <div class="meteo col-2">Meteo</div>
+            <div class="meteo col-2">
+                <div id="WeatherTutiempo"><div class="header"><h2>
+                            {{ meteo.locality.name }}</h2>
+                    </div><div class="daydata">
+                        <p class="it"><img alt="{{ meteo.day1.text }}" title="{{ meteo.day1.text }}
+                " height="50" src="https://v5i.tutiempo.net/wi/01/50/{{ meteo.day1.icon }}.png" width="50">
+                            {{ meteo.day1.temperature_max }}&deg;C<br>{{ meteo.day1.temperature_min }}&deg;C</p>
+                    </div>
+            </div>
         </div>
-<<<<<<< HEAD
 
         <div class="row">
             <div class="col-4">
@@ -123,7 +130,6 @@
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -171,8 +177,8 @@
 {% block javascripts %}
     <script>
         let panorama;
-        const lat = document.getElementById('get_lat').innerHTML;
-        const long = document.getElementById('get_long').innerHTML;
+        const lat = document.getElementById('get_lat').innerText;
+        const long = document.getElementById('get_long').innerText;
 
         function initialize() {
             panorama = new google.maps.StreetViewPanorama(
