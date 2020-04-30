@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/src/Controller/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CountryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/CountryManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CountryManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/Country/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Country/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,6 +92,7 @@
       <workItem from="1588196207809" duration="90000" />
       <workItem from="1588196556607" duration="1347000" />
       <workItem from="1588199771501" duration="5785000" />
+      <workItem from="1588208915893" duration="473000" />
     </task>
     <servers />
   </component>
