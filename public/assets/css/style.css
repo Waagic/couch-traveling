@@ -4,6 +4,11 @@ body{
     background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
 }
 
+#WeatherTutiempo{
+    display: flex;
+    justify-content: flex-end;
+}
+
 h2{
     border-top:1px solid black;
 }

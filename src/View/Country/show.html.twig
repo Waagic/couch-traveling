@@ -17,14 +17,14 @@
 
         <div class="row">
 
-            <div class="meteo col-2">
-                <div id="WeatherTutiempo"><div class="header"><h2>
-                            {{ meteo.locality.name }}</h2>
-                    </div><div class="daydata">
+            <div class="meteo col-8 offset-4">
+                <div id="WeatherTutiempo">
+                    <div class="daydata">
                         <p class="it"><img alt="{{ meteo.day1.text }}" title="{{ meteo.day1.text }}
                 " height="50" src="https://v5i.tutiempo.net/wi/01/50/{{ meteo.day1.icon }}.png" width="50">
                             {{ meteo.day1.temperature_max }}&deg;C<br>{{ meteo.day1.temperature_min }}&deg;C</p>
                     </div>
+                </div>
             </div>
         </div>
 
@@ -115,24 +115,24 @@
     </div>
 {% endblock %}
 
-{% block javascripts %}
-    <script>
-        let panorama;
+    {% block javascripts %}
+        <script>
+            let panorama;
 
-        function initialize() {
-            panorama = new google.maps.StreetViewPanorama(
-                document.getElementById('street_view'),
-                {
-                    position: {lat: {{ country.lat }}, lng: {{ country.long }}},
-                    pov: {heading: 165, pitch: 0},
-                    zoom: 1
-                });
-        }
+            function initialize() {
+                panorama = new google.maps.StreetViewPanorama(
+                    document.getElementById('street_view'),
+                    {
+                        position: {lat: {{ country.lat }}, lng: {{ country.long }}},
+                        pov: {heading: 165, pitch: 0},
+                        zoom: 1
+                    });
+            }
 
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqeJ3DM3pEmmI5Qyt_qwaqFwhXJUag9Rs&callback=initialize">
-    </script>
-    {#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5Xou67tRIPRc31tgVd2yY9SQFhaJpUw&callback=initMap"#}
-    {#            async defer></script>#}
-{% endblock %}
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqeJ3DM3pEmmI5Qyt_qwaqFwhXJUag9Rs&callback=initialize">
+        </script>
+        {#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5Xou67tRIPRc31tgVd2yY9SQFhaJpUw&callback=initMap"#}
+        {#            async defer></script>#}
+    {% endblock %}
