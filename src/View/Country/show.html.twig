@@ -2,53 +2,52 @@
 
 {% block content %}
 
-    {% include 'header.html' %}
-    <section class="container-fluid">
+    <div class="container">
 
         <div class="row">
 
-            <div class="col-1" id="flag_img">
+            <div class="col-12 col-xl-2" id="flag_img">
                 <img src="{{ country.Flag }}">
             </div>
 
-            <div class="col-9">
+            <div class="col-12 col-xl-5">
                 <h1>{{ country.Name }}</h1>
             </div>
 
-            <div class="meteo col-2">Meteo</div>
+            <div class="meteo col-12 col-xl-2">Meteo</div>
+
         </div>
 
         <div class="row">
-            <div class="col-4">
+            <div class="col-12 col-xl-8 offset-xl-2">
                 <blockquote class="description-text">
                     "{{ country.description }}"
                 </blockquote>
             </div>
+        </div>
 
-            <div class="col-2 offset-6">
+        <div class="row">
+            <div class="col-12 col-xl-3 offset-xl-2 informations">
                 <table>
                     <tr>
-                        <td>Capitale</td>
+                        <td>Capitale :</td>
                         <td>{{ country.Capital }}</td>
                     </tr>
                     <tr>
-                        <td>Population</td>
-                        <td>{{ country.Population }}</td>
+                        <td>Population :</td>
+                        <td> {{ country.Population }}</td>
                     </tr>
                     <tr>
-                        <td>Langue</td>
+                        <td>Langue :</td>
                         <td>{{ language.Name }}</td>
                     </tr>
                     <tr>
-                        <td>Monnaie</td>
+                        <td>Monnaie :</td>
                         <td>{{ currency.Name|capitalize }}</td>
                     </tr>
                 </table>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-4 offset-5">
+            <div class="col-12 col-xl-6">
                 <h2 style="text-align: center;">Coin cuisine</h2>
                 <div class="row">
                     {% for food in foods %}
@@ -66,21 +65,25 @@
         </div>
 
         <div class="row">
-            <div class="col-4 offset-1">
+            <div class="col-12 col-xl-4">
                 <h2 style="text-align: center;">Un peu de musique ?</h2>
-                {% for i in range(0,1) %}
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
-                            <div style="height: 200px; border: 1px solid black;">p</div>
-                        </div>
-                    </div>
-                {% endfor %}
+            </div>
+        </div>
+        {% for music in musics %}
+            <div class="col-12 col-xl-4">
+                <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
+            </div>
+        {% endfor %}
+
+        <div class="row">
+            <div class="col-12">
+                <h2 style="text-align: center;">Une petite balade ?</h2>
+                <div id="street_view"></div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-4 offset-6">
+            <div class="col-12">
                 <h2 style="text-align: center;">Une Webcam au hasard</h2>
 
                 <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
@@ -89,16 +92,7 @@
                         src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
             </div>
         </div>
-
-
-        <div class="row" style="height: 600px; width: 600px;">
-            <div class="col-12">
-                <h2 style="text-align: center;">Une petite balade ?</h2>
-                <div id="street_view"></div>
-            </div>
-        </div>
-
-    </section>
+    </div>
 {% endblock %}
 
 {% block javascripts %}
