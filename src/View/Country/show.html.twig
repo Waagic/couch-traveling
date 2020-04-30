@@ -73,15 +73,11 @@
                     </div>
                 </div>
                 <div class="row music-row">
+                    {% for music in musics %}
                     <div class="col-12 col-xl-4">
-                        Titre - Artiste
+                        <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
                     </div>
-                    <div class="col-12 col-xl-4">
-                        Titre - Artiste
-                    </div>
-                    <div class="col-12 col-xl-4">
-                        Titre - Artiste
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="row title-plat-row">
                     <div class="col-12">
