@@ -23,7 +23,7 @@ class CountryManager extends AbstractManager
     public function selectMusicByCountry($id)
     {
 
-        $query = 'SELECT Artist, Title, url FROM ' . self::TABLE .
+        $query = 'SELECT * FROM ' . self::TABLE .
             ' c JOIN  music ON c.id = music.idCountry WHERE c.id =' . $id;
 
         $statement = $this-> pdo->prepare($query);
@@ -34,4 +34,16 @@ class CountryManager extends AbstractManager
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
 
+
+    public function selectFoodByCountry($id)
+    {
+        $query = "SELECT dish, img FROM " . self::TABLE .
+            ' c JOIN food ON c.id = food.idCountry WHERE c.id =' . $id;
+
+        $statement = $this-> pdo->prepare($query);
+        $statement->bindValue(':id', $id);
+        $statement -> execute();
+
+        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+    }
 }
