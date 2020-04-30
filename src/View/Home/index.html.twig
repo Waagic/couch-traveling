@@ -1,5 +1,163 @@
 {% extends 'layout.html.twig' %}
 
-{% block content %}
-    <h1>Couch Traveler</h1>
+{% block stylesheet %}
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 80px; bottom: 80px; width: 100%; }
+        header, footer {height: 80px; width: 100%;}
+        header {position: absolute; top: 0px;}
+        header > h1 {text-align: center; font-weight: bold; margin-left: auto;}
+        footer {position: absolute; bottom: 0px;}
+
+        #menu {
+            position: absolute;
+            top: 10px;
+            padding: 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+    </style>
 {% endblock %}
+
+
+{% block content %}
+        <div id="map"></div>
+
+    <div id="menu">
+        <input id="light-v10" type="radio" name="rtoggle" value="streets" checked="checked" />
+        <label for="light">light</label>
+        <input id="dark-v10" type="radio" name="rtoggle" value="dark" />
+        <label for="dark">dark</label>
+    </div>
+
+    <footer></footer>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+    ///////////////////////////////////////////////////////////////// ZOOM LEVEL - CENTER - STYLE /////////////////////
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoicGFrb3JlayIsImEiOiJjazlsNmZhYmUwMXMwM29xdWpmbGJkM3JlIn0.O6roStKaRFT3RbLMrlPpwA';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/light-v10', // stylesheet location
+            center: [0, 20], // starting position [lng, lat]
+            zoom: 1.6 // starting zoom
+        });
+    ///////////////////////////////////////////////////////////////// HOVER EFFECT /////////////////////////////////////
+
+
+        var hoveredStateId = null;
+
+        map.on('load', function() {
+            // map.addSource('states', {
+            //     'type': 'geojson',
+            //     'data': 'assets/json/countries.geojson'
+            // });
+            map.addSource('states_custom', {
+                'type': 'geojson',
+                'data': 'assets/json/custom.geojson'
+            });
+
+            map.addLayer({
+                'id': 'state-fills',
+                'type': 'fill',
+                'source': 'states_custom',
+                'layout': {},
+                'paint': {
+                    'fill-color': '#00f5ff',
+                    'fill-opacity': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        0.8,
+                        0.4
+                    ]
+                }
+            });
+
+            // map.addLayer({
+            //     'id': 'state-borders',
+            //     'type': 'line',
+            //     'source': 'states_custom',
+            //     'layout': {},
+            //     'paint': {
+            //         'line-color': '',
+            //         'line-width': 1
+            //     }
+            // });
+
+            map.on('mousemove', 'state-fills', function (e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId) {
+                        map.setFeatureState(
+                            {source: 'states_custom', id: hoveredStateId},
+                            {hover: false}
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        {source: 'states_custom', id: hoveredStateId},
+                        {hover: true}
+                    );
+
+                }
+            });
+
+            map.on('mouseleave', 'state-fills', function () {
+                if (hoveredStateId) {
+                    map.setFeatureState(
+                        {source: 'states_custom', id: hoveredStateId},
+                        {hover: false}
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+            function redirect() {
+                window.location.replace("http://localhost:9090/Country/show/" + hoveredStateId);
+            }
+
+            map.on('click', 'state-fills', function (e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId) {
+                        map.setFeatureState(
+                            {source: 'states_custom', id: hoveredStateId},
+                            {hover: false}
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        {source: 'states_custom', id: hoveredStateId},
+                        {hover: true}
+                    );
+                    map.onclick = redirect();
+
+                }
+            });
+
+
+
+
+
+
+
+                    // var layerList = document.getElementById('menu');
+            // var inputs = layerList.getElementsByTagName('input');
+            //
+            // function switchLayer(layer) {
+            //     var layerId = layer.target.id;
+            //     map.setStyle('mapbox://styles/mapbox/' + layerId);
+            // }
+            //
+            // for (var i = 0; i < inputs.length; i++) {
+            //     inputs[i].onclick = switchLayer;
+            // }
+
+        });
+
+    </script>
+
+{% endblock %}
+
