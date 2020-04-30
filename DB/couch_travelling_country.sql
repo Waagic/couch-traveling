@@ -25,7 +25,6 @@ DROP TABLE IF EXISTS `country`;
 CREATE TABLE `country` (
   `id` int(11) NOT NULL,
   `Name` varchar(255) NOT NULL,
-  `description` TEXT NOT NULL,
   `Capital` varchar(255) NOT NULL,
   `Flag` varchar(255) NOT NULL,
   `Population` int(11) NOT NULL,
@@ -61,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-30 10:53:19
+-- Dump completed on 2020-04-30 12:01:13

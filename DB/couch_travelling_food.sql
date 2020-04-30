@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `food`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `food` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `dish` varchar(255) NOT NULL,
+  `food` varchar(255) NOT NULL,
   `idCountry` int(11) NOT NULL,
   `img` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-30 10:48:27
+-- Dump completed on 2020-04-30 12:01:13
