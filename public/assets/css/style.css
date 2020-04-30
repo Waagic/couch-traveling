@@ -1,14 +1,44 @@
 /* COUNTRY BOARD */
+body{
+    background-color: #f0f0f0;
+    background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+}
+
+h2{
+    border-top:1px solid black;
+}
+
 iframe {
     min-height: 300px;
 }
 
-iframe.youtube {
-    width: 100%;
+#flag_img > img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
 }
 
-div > iframe {
+.country-name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.informations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.informations table{
+    margin-top:5px;
+}
+
+iframe {
     width: 100%;
+    height: 300px;
     display: block;
 }
 
@@ -26,6 +56,29 @@ div > iframe {
 
 .text-plat {
     text-align: center;
+}
+
+#street_view{
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.meteo{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-img-top{
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-row{
+    margin-bottom: 10px;
+}
+
+.music-row{
+    margin-bottom: 10px;
 }
 
 /* GENERAL CSS */
@@ -273,4 +326,59 @@ header > span > h1 {font-size: 56px;}
         min-width: 250px;
         min-height: 150px;
     }
+
+    /* COUNTRY */
+
+    #flag_img {
+        width: 120px;
+    }
+
+    #flag_img > img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        border: 1px solid black;
+    }
+
+    section:first-of-type {
+        margin-top: 150px;
+    }
+
+    section > div:first-of-type {
+        height: 150px;
+        margin: 20px 100px;
+    }
+
+    section > div:first-of-type > div > h1 {
+        font-size: 64px;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+
+    section > div:nth-of-type(2) {
+        padding-left: 50px;
+    }
+
+
+    section > div:nth-of-type(2) > div {
+        margin-bottom: 60px;
+        height: 150px;
+    }
+
+    .description-text {
+        column-count: 3;
+        column-gap: 40px;
+        column-rule-style: solid;
+    }
+
+    .container-webcams {
+        width: 40%;
+        margin: auto auto;
+    }
+
+    #street_view {
+        height: 500px;
+    }
+
+    /* COUNTRY */
 }

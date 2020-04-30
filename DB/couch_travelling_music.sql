@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `couch_travelling` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `couch_travelling`;
 -- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
 --
 -- Host: localhost    Database: couch_travelling
@@ -42,7 +40,7 @@ CREATE TABLE `music` (
 
 LOCK TABLES `music` WRITE;
 /*!40000 ALTER TABLE `music` DISABLE KEYS */;
-INSERT INTO `music` VALUES (1,'Hymne National Français','La Marseillaise',NULL,'https://youtu.be/221UWotqwdo');
+INSERT INTO `music` VALUES (1,'Hymne National Français','La Marseillaise',1,'https://youtu.be/221UWotqwdo');
 /*!40000 ALTER TABLE `music` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-29 22:56:46
+-- Dump completed on 2020-04-30 10:48:27
