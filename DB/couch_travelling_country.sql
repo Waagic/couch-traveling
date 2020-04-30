@@ -27,6 +27,7 @@ DROP TABLE IF EXISTS `country`;
 CREATE TABLE `country` (
   `id` int(11) NOT NULL,
   `Name` varchar(255) NOT NULL,
+  `description` TEXT NOT NULL,
   `Capital` varchar(255) NOT NULL,
   `Flag` varchar(255) NOT NULL,
   `Population` int(11) NOT NULL,
