@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 use App\Model\CountryManager;
+use App\Model\MuseumManager;
 
 /**
  * Class CountryController
@@ -38,8 +39,16 @@ class CountryController extends AbstractController
         $foods = $countryManager->selectFoodByCountry($id);
         $language = $countryManager->selectLanguageByCountry($id);
         $currency = $countryManager->selectCurrencyByCountry($id);
+        $museumsManager = new MuseumManager();
+        $museums = $museumsManager->selectByCountry($id);
 
-        return $this->twig->render('Country/show.html.twig', ['country' => $country,
-            'language' => $language, 'currency' => $currency, 'musics' => $musics, 'foods' => $foods]);
+        return $this->twig->render('Country/show.html.twig', [
+            'country' => $country,
+            'language' => $language,
+            'currency' => $currency,
+            'musics' => $musics,
+            'foods' => $foods,
+            'museums' => $museums
+        ]);
     }
 }
