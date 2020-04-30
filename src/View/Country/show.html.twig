@@ -1,59 +1,5 @@
 {% extends '/layout.html.twig' %}
 
-{% block stylesheet %}
-    <style>
-
-
-        #flag_img { width: 120px;}
-
-        #flag_img > img {
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-        }
-
-        section:first-of-type {margin-top: 150px;}
-
-        section > div:first-of-type {
-            height: 150px;
-            margin: 20px 100px;
-        }
-
-        section > div:first-of-type > div > h1 {
-            font-size: 64px;
-            text-transform: uppercase;
-            padding-top: 20px;
-        }
-
-        section > div:nth-of-type(2) {
-            padding-left: 50px;
-        }
-
-
-        section > div:nth-of-type(2) > div {
-            margin-bottom: 60px;
-            height: 150px;
-        }
-
-        .description-text {
-            column-count: 3;
-            column-gap: 40px;
-            column-rule-style: solid;
-        }
-
-        .container-webcams {
-            width: 40%;
-            margin: auto auto;
-        }
-
-        #street_view { height: 100%;}
-
-
-
-    </style>
-{% endblock %}
-
-
 {% block content %}
 
     {% include 'header.html' %}
@@ -71,7 +17,6 @@
 
             <div class="meteo col-2">Meteo</div>
         </div>
-<<<<<<< HEAD
 
         <div class="row">
             <div class="col-4">
@@ -106,23 +51,15 @@
             <div class="col-4 offset-5">
                 <h2 style="text-align: center;">Coin cuisine</h2>
                 <div class="row">
-                    <div class="col-6">
-                        <div class="card">
-                            <img src="{{ foods[0]['img'] }}" height="200px" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ foods[0]['dish'] }}</h5>
+                    {% for food in foods %}
+                        <div class="col-6">
+                            <div class="card">
+                                <img src="{{ food.img }}" height="200px" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ food.Name }}</h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card">
-                            <img src="{{ foods[1]['img'] }}" height="200px" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ foods[1]['dish'] }}</h5>
-
-                            </div>
-                        </div>
-                    </div>
                     {% endfor %}
                 </div>
             </div>
@@ -131,14 +68,14 @@
         <div class="row">
             <div class="col-4 offset-1">
                 <h2 style="text-align: center;">Un peu de musique ?</h2>
-                    {% for i in range(0,1) %}
-                        <div class="row">
-                            <div class="col-12">
-                                <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
-                                <div style="height: 200px; border: 1px solid black;">p</div>
-                            </div>
+                {% for i in range(0,1) %}
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
+                            <div style="height: 200px; border: 1px solid black;">p</div>
                         </div>
-                    {% endfor %}
+                    </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -157,11 +94,7 @@
         <div class="row" style="height: 600px; width: 600px;">
             <div class="col-12">
                 <h2 style="text-align: center;">Une petite balade ?</h2>
-
-                <span id="get_lat">{{ country.lat }}</span>
-                <span id="get_long">{{ country.long }}</span>
                 <div id="street_view"></div>
-
             </div>
         </div>
 
@@ -171,31 +104,21 @@
 {% block javascripts %}
     <script>
         let panorama;
-        const lat = document.getElementById('get_lat').innerHTML;
-        const long = document.getElementById('get_long').innerHTML;
 
         function initialize() {
             panorama = new google.maps.StreetViewPanorama(
                 document.getElementById('street_view'),
                 {
-                    position: {lat: lat, lng: long},
+                    position: {lat: {{ country.lat }}, lng: {{ country.long }}},
                     pov: {heading: 165, pitch: 0},
                     zoom: 1
                 });
         }
 
-        // let map;
-        // function initMap() {
-        //     map = new google.maps.Map(document.getElementById('street_view'), {
-        //         center: {lat: lat, lng: long},
-        //         zoom: 8
-        //     });
-        // }
-
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqeJ3DM3pEmmI5Qyt_qwaqFwhXJUag9Rs&callback=initialize">
     </script>
-{#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5Xou67tRIPRc31tgVd2yY9SQFhaJpUw&callback=initMap"#}
-{#            async defer></script>#}
+    {#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN5Xou67tRIPRc31tgVd2yY9SQFhaJpUw&callback=initMap"#}
+    {#            async defer></script>#}
 {% endblock %}

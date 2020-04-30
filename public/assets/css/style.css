@@ -273,4 +273,58 @@ header > span > h1 {font-size: 56px;}
         min-width: 250px;
         min-height: 150px;
     }
+
+    /* COUNTRY */
+
+    #flag_img {
+        width: 120px;
+    }
+
+    #flag_img > img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+    }
+
+    section:first-of-type {
+        margin-top: 150px;
+    }
+
+    section > div:first-of-type {
+        height: 150px;
+        margin: 20px 100px;
+    }
+
+    section > div:first-of-type > div > h1 {
+        font-size: 64px;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+
+    section > div:nth-of-type(2) {
+        padding-left: 50px;
+    }
+
+
+    section > div:nth-of-type(2) > div {
+        margin-bottom: 60px;
+        height: 150px;
+    }
+
+    .description-text {
+        column-count: 3;
+        column-gap: 40px;
+        column-rule-style: solid;
+    }
+
+    .container-webcams {
+        width: 40%;
+        margin: auto auto;
+    }
+
+    #street_view {
+        height: 100%;
+    }
+
+    /* COUNTRY */
 }
