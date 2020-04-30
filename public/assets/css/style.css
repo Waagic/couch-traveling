@@ -1,12 +1,39 @@
 /* COUNTRY BOARD */
+body{
+    background-color: #f0f0f0;
+    background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+}
+
+h2{
+    border-top:1px solid black;
+}
+
 iframe {
     min-height: 300px;
+}
+
+#flag_img > img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+}
+
+.country-name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .informations{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.informations table{
+    margin-top:5px;
 }
 
 iframe {
@@ -33,6 +60,25 @@ iframe {
 
 #street_view{
     height: 200px;
+    margin-bottom: 10px;
+}
+
+.meteo{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-img-top{
+    height: 200px;
+    object-fit: cover;
+}
+
+.food-row{
+    margin-bottom: 10px;
+}
+
+.music-row{
+    margin-bottom: 10px;
 }
 
 /* GENERAL CSS */
@@ -291,6 +337,7 @@ header > span > h1 {font-size: 56px;}
         border-radius: 50%;
         width: 120px;
         height: 120px;
+        border: 1px solid black;
     }
 
     section:first-of-type {
