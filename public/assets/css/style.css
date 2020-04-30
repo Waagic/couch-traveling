@@ -5,13 +5,32 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+.nav-bar {
+    background: linear-gradient(to bottom,grey, rgba(0,0,0,0));
+    height: 100px;
+}
+
+.nav-bar-icon {
+    height: 80px;
+}
+
+.nav-link {
+    font-size: 20px;
+}
 /* MUSEUM SECTION FOR ALL SIZE */
+h1 {
+    font-weight: 900;
+    text-align: center;
+}
+
 .museum-banner-container {
     display: flex;
     overflow: hidden;
     max-height: 250px;
     place-items: flex-end;
     background: linear-gradient(to top,black, rgba(0,0,0,0));
+    box-shadow: black 0px 0px 10px;
+    margin: 10px 0;
 }
 
 .museum-banner-image {
@@ -32,6 +51,12 @@ body {
     color: white;
     padding: 15px 30px;
 }
+
+.footer {
+    background: linear-gradient(to top,grey, rgba(0,0,0,0));
+    height: 100px;
+}
+
 /* EXTRA SMALL DEVICES AND MOBILE */
 @media screen and (max-width: 700px){
     /* MUSEUM SECTION */
