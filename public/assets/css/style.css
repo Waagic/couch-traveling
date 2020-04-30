@@ -30,15 +30,38 @@ div > iframe {
     }
 }
 /* GENERAL CSS */
-* {
+*, body, container, container-fluid, ul, li {
     margin: 0;
+    padding: 0;
 }
 body {
     font-family: 'Roboto', sans-serif;
 }
+#map { position: absolute; top: 150px; bottom: 80px; width: 100%; z-index: -1; }
+header, footer {width: 100%;}
+header {position: absolute; top: 0px; margin-top: 30px;}
+header > span { margin: auto auto;}
+header > span > h1,p {text-align: center; margin-left: auto;}
+footer {position: absolute; bottom: 0px;}
+
+
+a:link {text-decoration: none; color: black;}
+a:visited {text-decoration: none; color: black;}
+a:hover {text-decoration: underline; color: #00f5ff;}
+a:active {text-decoration: underline; color: #00f5ff;}
+
+header > span > h1 {font-size: 56px;}
 .nav-bar {
-    background: linear-gradient(to bottom,grey, rgba(0,0,0,0));
+    /*background: linear-gradient(to bottom,grey, rgba(0,0,0,0));*/
     height: 100px;
+    z-index: 10;
+}
+
+.nav-bar > div { margin: auto auto; }
+
+.nav-bar > div > a {
+    display: flex;
+    justify-content: center;
 }
 
 .nav-bar-icon {
@@ -49,10 +72,7 @@ body {
     font-size: 20px;
 }
 /* MUSEUM SECTION FOR ALL SIZE */
-h1 {
-    font-weight: 900;
-    text-align: center;
-}
+
 
 .museum-banner-container {
     display: flex;

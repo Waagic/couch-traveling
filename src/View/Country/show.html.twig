@@ -1,123 +1,145 @@
 {% extends '/layout.html.twig' %}
 
+{% block stylesheet %}
+    <style>
+
+
+        #flag_img { width: 120px;}
+
+        #flag_img > img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+
+        section:first-of-type {margin-top: 150px;}
+
+        section > div:first-of-type {
+            height: 150px;
+            margin: 20px 100px;
+        }
+
+        section > div:first-of-type > div > h1 {
+            font-size: 64px;
+            text-transform: uppercase;
+            padding-top: 20px;
+        }
+
+        section > div:nth-of-type(2) {
+            padding-left: 50px;
+        }
+
+
+        section > div:nth-of-type(2) > div {
+            margin-bottom: 60px;
+            height: 150px;
+        }
+
+        .description-text {
+            column-count: 3;
+            column-gap: 40px;
+            column-rule-style: solid;
+        }
+
+        .container-webcams {
+            width: 40%;
+            margin: auto auto;
+        }
+
+
+
+    </style>
+{% endblock %}
+
+
 {% block content %}
-    {{ dump(foods) }}
-    <div class="container">
-        <div class="row title-row">
-            <div class="col-8">
+    {% include 'header.html' %}
+    <section class="container-fluid">
+
+        <div class="row">
+
+            <div class="col-1" id="flag_img">
+                <img src="{{ country.Flag }}">
+            </div>
+
+            <div class="col-9">
                 <h1>{{ country.Name }}</h1>
             </div>
-            <div class="meteo">Meteo</div>
+
+            <div class="meteo col-2">Meteo</div>
         </div>
-        <div class="row container-informations">
-            <div class="col-12 col-xl-6">
-                <div class="row description-row">
-                    <div class="col-12 col-xl-12">
-                        <p class="description-text">
-                            {{ country.description }}
-                        </p>
+
+        <div class="row">
+            <div class="col-4">
+                <blockquote class="description-text">
+                    "{{ country.description }}"
+                </blockquote>
+            </div>
+
+            <div class="col-2 offset-6">
+                <table>
+                    <tr>
+                        <td>Capitale</td>
+                        <td>{{ country.Capital }}</td>
+                    </tr>
+                    <tr>
+                        <td>Population</td>
+                        <td>{{ country.Population }}</td>
+                    </tr>
+                    <tr>
+                        <td>Langue</td>
+                        <td>{{ language.Name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Monnaie</td>
+                        <td>{{ currency.Name|capitalize }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 offset-5">
+                <h2 style="text-align: center;">Coin cuisine</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <img src="{{ foods[0]['img'] }}" height="200px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ foods[0]['dish'] }}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <img src="{{ foods[1]['img'] }}" height="200px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ foods[1]['dish'] }}</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row capital-title">
-                    <div class="col-12">
-                        <h2>Capitale</h2>
-                    </div>
-                </div>
-                <div class="row capital-row">
-                    <div class="col-12 col-xl-12">
-                        <p>{{ country.Capital }}</p>
-                    </div>
-                </div>
-                <div class="row flag-title">
-                    <div class="col-12">
-                        <h2>Drapeau</h2>
-                    </div>
-                </div>
-                <div class="row flag-row">
-                    <div class="col-12 col-xl-12">
-                        <img src="{{ country.Flag }}">
-                    </div>
-                </div>
-                <div class="row capital-title">
-                    <div class="col-12">
-                        <h2>Population</h2>
-                    </div>
-                </div>
-                <div class="row capital-row">
-                    <div class="col-12 col-xl-12">
-                        <p>{{ country.Population }}</p>
-                    </div>
-                </div>
-                <div class="row currency-title">
-                    <div class="col-12">
-                        <h2>Langue</h2>
-                    </div>
-                </div>
-                <div class="row currency-row">
-                    <div class="col-12 col-xl-12">
-                        <p>{{ language.Name }}</p>
-                    </div>
-                </div>
-                <div class="row currency-title">
-                    <div class="col-12">
-                        <h2>Monnaie</h2>
-                    </div>
-                </div>
-                <div class="row currency-row">
-                    <div class="col-12 col-xl-12">
-                        <p>{{ currency.Name|capitalize }}</p>
-                    </div>
-                </div>
-                <div class="row title-music-row">
-                    <div class="col-12">
-                        <h2>Musiques locales</h2>
-                    </div>
-                </div>
-                <div class="row music-row">
-                    {% for music in musics %}
-                        <div class="col-12 col-xl-4">
-                            <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 offset-1">
+                <h2 style="text-align: center;">Un peu de musique ?</h2>
+                    {% for i in range(0,1) %}
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
+                                <div style="height: 200px; border: 1px solid black;">p</div>
+                            </div>
                         </div>
                     {% endfor %}
-                </div>
-                <div class="row title-plat-row">
-                    <div class="col-12">
-                        <h2>Plats locaux</h2>
-                    </div>
-                </div>
-                <div class="row plat-row">
-                    <div class="col-12 col-xl-4">
-                        <div class="card">
-                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Choucroute</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="card">
-                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Choucroute</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="card">
-                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Choucroute</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-6">
-                <div id="street-view"></div>
             </div>
         </div>
-        <div class="row container-webcams">
-            <div class="col-12 col-xl-12">
+
+        <div class="row">
+            <div class="col-4 offset-6">
+                <h2 style="text-align: center;">Une Webcam au hasard</h2>
+
                 <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
                    href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
                 <script async type="text/javascript"
@@ -125,7 +147,14 @@
             </div>
         </div>
 
-    </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div id="street-view"></div>
+            </div>
+        </div>
+
+    </section>
 {% endblock %}
 
 {% block javascripts %}
