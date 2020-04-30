@@ -4,6 +4,8 @@
 namespace App\Controller;
 
 use App\Model\CountryManager;
+use App\Model\LanguageManager;
+use App\Model\CurrencyManager;
 
 /**
  * Class CountryController
@@ -35,9 +37,14 @@ class CountryController extends AbstractController
         $countryManager = new CountryManager();
         $country = $countryManager->selectOneById($id);
         $musics = $countryManager->selectMusicByCountry($id);
+      
+        $languageManager = new LanguageManager();
+        $language = $languageManager->selectLanguageByCountry($id);
 
-        return $this->twig->render('Country/show.html.twig', ['country' => $country, 'musics'=>$musics]);
-        
+        $currencyManager = new CurrencyManager();
+        $currency = $currencyManager->selectCurrencyByCountry($id);
 
+        return $this->twig->render('Country/show.html.twig', ['country' => $country,
+            'language' => $language, 'currency' => $currency,  'musics' => $musics]);
     }
 }
