@@ -1,7 +1,6 @@
 {% extends '/layout.html.twig' %}
 
 {% block content %}
-    {{ dump(foods) }}
     <div class="container">
         <div class="row title-row">
             <div class="col-8">
@@ -86,30 +85,16 @@
                     </div>
                 </div>
                 <div class="row plat-row">
+                    {% for food in foods %}
                     <div class="col-12 col-xl-4">
                         <div class="card">
-                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
+                            <img src="{{ food.img }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Choucroute</h5>
+                                <h5 class="card-title">{{ food.Name }}</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="card">
-                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Choucroute</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="card">
-                            <img src="https://cdn.lacuisinedannie.com/images/45.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Choucroute</h5>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="col-12 col-xl-6">
