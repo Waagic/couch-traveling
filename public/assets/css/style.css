@@ -115,7 +115,6 @@ header > span > h1 {font-size: 56px;}
 .nav-bar {
     background: linear-gradient(to bottom,grey, rgba(0,0,0,0));
     height: 100px;
-    z-index: 10;
 }
 
 .nav-bar > div { margin: auto auto; }
