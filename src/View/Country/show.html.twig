@@ -103,7 +103,7 @@
         <div class="row music-row">
             {% for museum in museums %}
                 <div class="col-12 col-xl-4">
-                    {{ dump(museum) }}
+                    <a href="/museum/show/{{ museum.id }}">{{ museum.name }}</a>
                 </div>
             {% endfor %}
         </div>

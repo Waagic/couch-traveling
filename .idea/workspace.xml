@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d82f3326-bb54-4c2a-b5cf-41b3783864f9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/1200px-Museum_of_New_Zealand_Te_Papa_Tongarewa.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/3070_01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/8729c82cde4d399727259455864255b6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/American-Museum.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/Egyptian-Museum-768x430.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/MCA_Architecture-116_Pieter_Naessens.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/National-Museum-building-situated-in-New-Delhi,-India.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/Shanghai.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/athens-museums-1280.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/state-russian-museum-in-st-petersburg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/museum/tour-apartheid-museum.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/Creation shema base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/creation shema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_country.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_country.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_country_lucas.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_currency.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_currency.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_food.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_food.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_language.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_language.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_museum.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_museum.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_music.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_music.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CountryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CountryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Country/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Country/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Museum/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Museum/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/layout.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/MuseumManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/MuseumManager.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

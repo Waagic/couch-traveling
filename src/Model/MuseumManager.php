@@ -23,7 +23,7 @@ class MuseumManager extends AbstractManager
     public function selectByCountry($id)
     {
         //prepared request
-        $query = "SELECT * FROM " . self::TABLE . " m JOIN country c ON m.idCountry=c.id WHERE c.id=:id";
+        $query = "SELECT m.id, m.name FROM " . self::TABLE . " m JOIN country c ON m.idCountry=c.id WHERE c.id=:id";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(':id', $id, \PDO::PARAM_INT);
         $statement->execute();

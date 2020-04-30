@@ -40,6 +40,8 @@ class CountryController extends AbstractController
         $foods = $countryManager->selectFoodByCountry($id);
         $language = $countryManager->selectLanguageByCountry($id);
         $currency = $countryManager->selectCurrencyByCountry($id);
+        $museumManager = new MuseumManager();
+        $museums = $museumManager->selectByCountry($id);
 
         $apis = [1 => 39720,
             2 => 32955,
@@ -62,6 +64,6 @@ class CountryController extends AbstractController
 
         return $this->twig->render('Country/show.html.twig', ['country' => $country,
             'language' => $language, 'currency' => $currency, 'musics' => $musics, 'foods' => $foods,
-            'meteo' => $weatherArray]);
+            'meteo' => $weatherArray, 'museums' =>$museums]);
     }
 }
