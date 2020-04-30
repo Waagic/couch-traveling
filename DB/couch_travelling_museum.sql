@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `couch_travelling` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `couch_travelling`;
 -- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
 --
 -- Host: localhost    Database: couch_travelling
@@ -18,8 +16,32 @@ USE `couch_travelling`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping routines for database 'couch_travelling'
+-- Table structure for table `museum`
 --
+
+DROP TABLE IF EXISTS `museum`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `museum` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `website` varchar(255) NOT NULL,
+  `idCountry` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_museum_idCountry` (`idCountry`),
+  CONSTRAINT `fk_museum_idCountry` FOREIGN KEY (`idCountry`) REFERENCES `country` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `museum`
+--
+
+LOCK TABLES `museum` WRITE;
+/*!40000 ALTER TABLE `museum` DISABLE KEYS */;
+/*!40000 ALTER TABLE `museum` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -30,4 +52,4 @@ USE `couch_travelling`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-29 22:56:46
+-- Dump completed on 2020-04-30 10:48:27
