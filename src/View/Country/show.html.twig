@@ -54,7 +54,7 @@
                 </div>
                 <div class="row currency-row">
                     <div class="col-12 col-xl-12">
-                        <p>Français</p>
+                        <p>{{ language.Name }}</p>
                     </div>
                 </div>
                 <div class="row currency-title">
@@ -64,7 +64,7 @@
                 </div>
                 <div class="row currency-row">
                     <div class="col-12 col-xl-12">
-                        <p>Euro €</p>
+                        <p>{{ currency.Name|capitalize }}</p>
                     </div>
                 </div>
                 <div class="row title-music-row">
@@ -74,9 +74,9 @@
                 </div>
                 <div class="row music-row">
                     {% for music in musics %}
-                    <div class="col-12 col-xl-4">
-                        <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
-                    </div>
+                        <div class="col-12 col-xl-4">
+                            <a href="{{ music.url }}">{{ music.Title }} - {{ music.Artist }}</a>
+                        </div>
                     {% endfor %}
                 </div>
                 <div class="row title-plat-row">
@@ -130,6 +130,7 @@
 {% block javascripts %}
     <script>
         var panorama;
+
         function initialize() {
             panorama = new google.maps.StreetViewPanorama(
                 document.getElementById('street-view'),

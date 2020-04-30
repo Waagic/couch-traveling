@@ -29,6 +29,6 @@ class CurrencyManager extends AbstractManager
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
         $statement->execute();
 
-        return $statement->fetchAll(\PDO::FETCH_ASSOC);
+        return $statement->fetch(\PDO::FETCH_ASSOC);
     }
 }
