@@ -4,3 +4,7 @@
 *.cache
 db.php
 .idea
+.idea/workspace.xml
+
+
+

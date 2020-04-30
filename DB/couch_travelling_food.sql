@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `couch_travelling` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `couch_travelling`;
 -- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
 --
 -- Host: localhost    Database: couch_travelling
@@ -26,7 +24,7 @@ DROP TABLE IF EXISTS `food`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `food` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `dish` varchar(255) NOT NULL,
+  `food` varchar(255) NOT NULL,
   `idCountry` int(11) NOT NULL,
   `img` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -54,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-29 22:56:46
+-- Dump completed on 2020-04-30 12:01:13
