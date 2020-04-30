@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d82f3326-bb54-4c2a-b5cf-41b3783864f9" name="Default Changelist" comment="" />
+    <list default="true" id="d82f3326-bb54-4c2a-b5cf-41b3783864f9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/Creation shema base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/creation shema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_country.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_country.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_country_lucas.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_currency.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_currency.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_food.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_food.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_language.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_language.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_museum.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_museum.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB/couch_travelling_music.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DB/couch_travelling_music.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +23,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="nico" />
+                    <option name="lastUsedInstant" value="1588233366" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1588233365" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -61,6 +96,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1bENrxZ8fKfA2UjiL6DM1sNGFcO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -99,10 +137,11 @@
     </state>
     <state x="838" y="347" key="#Notifications/0.0.1920.1022/1920.0.1920.1080@0.0.1920.1022" timestamp="1588206274665" />
     <state x="2758" y="367" width="233" height="353" key="#Notifications/0.0.1920.1022/1920.0.1920.1080@1920.0.1920.1080" timestamp="1588202781474" />
-    <state x="555" y="170" width="800" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588193810722">
-      <screen x="0" y="0" width="1920" height="1022" />
+    <state x="2475" y="180" width="800" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588234835563">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="170" width="800" height="690" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1022/1920.0.1920.1080@0.0.1920.1022" timestamp="1588193810722" />
+    <state x="2475" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.48.1920.1032/2953.1080.1920.1080@1920.0.1920.1080" timestamp="1588234835563" />
     <state width="1278" height="275" key="GridCell.Tab.0.bottom" timestamp="1588205035917">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -119,9 +158,21 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state width="1278" height="275" key="GridCell.Tab.0.right/0.0.1920.1022/1920.0.1920.1080@1920.0.1920.1080" timestamp="1588205035917" />
+    <state x="2650" y="157" width="451" height="761" key="RollbackChangesDialog" timestamp="1588233191407">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2650" y="157" width="451" height="761" key="RollbackChangesDialog/1920.0.1920.1080/0.48.1920.1032/2953.1080.1920.1080@1920.0.1920.1080" timestamp="1588233191407" />
     <state x="787" y="220" width="335" height="589" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1588199808737">
       <screen x="0" y="0" width="1920" height="1022" />
     </state>
     <state x="787" y="220" width="335" height="589" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1022/1920.0.1920.1080@0.0.1920.1022" timestamp="1588199808737" />
+    <state x="2027" y="538" width="965" height="478" key="dock-window-1" timestamp="1588236020712">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2027" y="538" width="965" height="478" key="dock-window-1/1920.0.1920.1080/0.48.1920.1032/2953.1080.1920.1080@1920.0.1920.1080" timestamp="1588236020712" />
+    <state x="2157" y="528" width="1178" height="478" key="dock-window-2" timestamp="1588236356308">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2157" y="528" width="1178" height="478" key="dock-window-2/1920.0.1920.1080/0.48.1920.1032/2953.1080.1920.1080@1920.0.1920.1080" timestamp="1588236356308" />
   </component>
 </project>

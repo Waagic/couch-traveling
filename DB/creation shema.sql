@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `couch_travelling` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `couch_travelling`;
 -- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
 --
 -- Host: localhost    Database: couch_travelling
@@ -30,4 +28,4 @@ USE `couch_travelling`;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-04-29 22:56:46
+-- Dump completed on 2020-04-30 10:48:27
