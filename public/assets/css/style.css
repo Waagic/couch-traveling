@@ -9,6 +9,10 @@ body{
     justify-content: flex-end;
 }
 
+.timelapse-row{
+    margin-bottom: 10px;
+}
+
 h2{
     border-top:1px solid black;
 }

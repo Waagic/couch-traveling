@@ -66,7 +66,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <h2>Coin cuisine</h2>
+                <h2>Un petit creux ?</h2>
             </div>
             <div class="row food-row">
                 {% for food in foods %}
@@ -115,11 +115,11 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row timelapse-row">
             <div class="col-12">
-                <h2>Une Webcam au hasard</h2>
+                <h2>Un petit timelapse ?</h2>
 
-                <a name="windy-webcam-timelapse-player" data-id="1463700399" data-play="day"
+                <a name="windy-webcam-timelapse-player" data-id="{{ museums[0].cam1 }}" data-play="day"
                    href="https://windy.com/webcams/1463700399" target="_blank">Égletons: Egletons</a>
                 <script async type="text/javascript"
                         src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
