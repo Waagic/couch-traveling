@@ -3,12 +3,15 @@ iframe {
     min-height: 300px;
 }
 
-iframe.youtube {
-    width: 100%;
+.informations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-div > iframe {
+iframe {
     width: 100%;
+    height: 300px;
     display: block;
 }
 
@@ -28,16 +31,43 @@ div > iframe {
     text-align: center;
 }
 
+#street_view{
+    height: 200px;
+}
+
 /* GENERAL CSS */
-* {
+*, body, container, container-fluid, ul, li {
     margin: 0;
+    padding: 0;
 }
 body {
     font-family: 'Roboto', sans-serif;
 }
+#map { position: absolute; top: 150px; bottom: 80px; width: 100%; z-index: -1; }
+header, footer {width: 100%;}
+header {position: absolute; top: 0px; margin-top: 30px;}
+header > span { margin: auto auto;}
+header > span > h1,p {text-align: center; margin-left: auto;}
+footer {position: absolute; bottom: 0px;}
+
+
+a:link {text-decoration: none; color: black;}
+a:visited {text-decoration: none; color: black;}
+a:hover {text-decoration: underline; color: #00f5ff;}
+a:active {text-decoration: underline; color: #00f5ff;}
+
+header > span > h1 {font-size: 56px;}
 .nav-bar {
-    background: linear-gradient(to bottom,grey, rgba(0,0,0,0));
+    /*background: linear-gradient(to bottom,grey, rgba(0,0,0,0));*/
     height: 100px;
+    z-index: 10;
+}
+
+.nav-bar > div { margin: auto auto; }
+
+.nav-bar > div > a {
+    display: flex;
+    justify-content: center;
 }
 
 .nav-bar-icon {
@@ -48,10 +78,7 @@ body {
     font-size: 20px;
 }
 /* MUSEUM SECTION FOR ALL SIZE */
-h1 {
-    font-weight: 900;
-    text-align: center;
-}
+
 
 .museum-banner-container {
     display: flex;
@@ -253,4 +280,58 @@ h1 {
         min-width: 250px;
         min-height: 150px;
     }
+
+    /* COUNTRY */
+
+    #flag_img {
+        width: 120px;
+    }
+
+    #flag_img > img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+    }
+
+    section:first-of-type {
+        margin-top: 150px;
+    }
+
+    section > div:first-of-type {
+        height: 150px;
+        margin: 20px 100px;
+    }
+
+    section > div:first-of-type > div > h1 {
+        font-size: 64px;
+        text-transform: uppercase;
+        padding-top: 20px;
+    }
+
+    section > div:nth-of-type(2) {
+        padding-left: 50px;
+    }
+
+
+    section > div:nth-of-type(2) > div {
+        margin-bottom: 60px;
+        height: 150px;
+    }
+
+    .description-text {
+        column-count: 3;
+        column-gap: 40px;
+        column-rule-style: solid;
+    }
+
+    .container-webcams {
+        width: 40%;
+        margin: auto auto;
+    }
+
+    #street_view {
+        height: 500px;
+    }
+
+    /* COUNTRY */
 }
