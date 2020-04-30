@@ -1,15 +1,16 @@
 <?php
+
 namespace App\Model;
 
 /**
  *
  */
-class LanguageManager extends AbstractManager
+class CurrencyManager extends AbstractManager
 {
     /**
      *
      */
-    const TABLE = 'language';
+    const TABLE = 'currency';
 
     /**
      *  Initializes this class.
@@ -19,10 +20,10 @@ class LanguageManager extends AbstractManager
         parent::__construct(self::TABLE);
     }
 
-    public function selectLanguageByCountry(int $id)
+    public function selectCurrencyByCountry(int $id)
     {
         // prepared request
-        $query = 'SELECT * FROM country  JOIN language ON country.idLanguage = language.id  WHERE  country.id =' .$id;
+        $query = 'SELECT * FROM country  JOIN currency ON country.idcurrency = currency.id  WHERE  country.id =' .$id;
 
         $statement = $this-> pdo->prepare($query);
         $statement->bindValue('id', $id, \PDO::PARAM_INT);
