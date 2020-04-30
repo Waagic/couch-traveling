@@ -57,5 +57,4 @@ class CountryManager extends AbstractManager
 
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
-
 }
