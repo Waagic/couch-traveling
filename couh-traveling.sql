@@ -62,7 +62,7 @@ CREATE TABLE `museum` (
     )
 );
 
-/*ALTER TABLE `country` ADD CONSTRAINT `fk_country_idCurrency` FOREIGN KEY(`idCurrency`)
+ALTER TABLE `country` ADD CONSTRAINT `fk_country_idCurrency` FOREIGN KEY(`idCurrency`)
 REFERENCES `currency` (`id`);
 
 ALTER TABLE `country` ADD CONSTRAINT `fk_country_idLanguage` FOREIGN KEY(`idLanguage`)
