@@ -97,6 +97,19 @@
 
         <div class="row">
             <div class="col-12">
+                <h2>Un peu de culture ?</h2>
+            </div>
+        </div>
+        <div class="row music-row">
+            {% for museum in museums %}
+                <div class="col-12 col-xl-4">
+                    <a href="/museum/show/{{ museum.id }}">{{ museum.name }}</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="row">
+            <div class="col-12">
                 <h2>Une petite balade ?</h2>
                 <div id="street_view"></div>
             </div>
